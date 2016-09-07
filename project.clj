@@ -12,6 +12,7 @@
                  [compojure "1.5.1"]
                  [hiccup "1.0.5"]
                  [ring/ring-jetty-adapter "1.5.0"]
+                 [yogthos/config "0.8"]
 
                  ;; Client
                  [reagent "0.5.1"]

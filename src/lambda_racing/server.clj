@@ -50,7 +50,7 @@
     #'server
     (constantly
       (jetty/run-jetty #'site
-                       {:port (Long. (or port 3000))
+                       {:port (long (or port 3000))
                         :join? false}))))
 
 (defn -main
