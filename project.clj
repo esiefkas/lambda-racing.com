@@ -34,7 +34,7 @@
 
   :clean-targets ^{:protect false} ["resources/public" "target"]
 
-  :uberjar-name "lambda-racing-standalone.jar"
+  :uberjar-name "lambda-racing.jar"
   :profiles {:uberjar {:aot :all
                        :main lambda-racing.server
                        :hooks [leiningen.cljsbuild]}}
