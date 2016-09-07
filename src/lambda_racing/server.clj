@@ -16,6 +16,7 @@
     [:title "Lambda Racing!!!!!!!"]]
    [:body
     [:div#app]
+    [:div "STATIC STUFF SEEMS FINE HERE"]
     (include-js "js/main.js")]])
 
 (def not-found-page

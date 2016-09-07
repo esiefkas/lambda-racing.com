@@ -38,5 +38,6 @@
   :uberjar-name "lambda-racing.jar"
   :profiles {:uberjar {:aot :all
                        :main lambda-racing.server
-                       :hooks [leiningen.cljsbuild]}}
+                       :hooks [leiningen.cljsbuild]
+                       :prep-tasks ["compile" ["cljsbuild" "once" "main"]]}}
   :main lambda-racing.server)
