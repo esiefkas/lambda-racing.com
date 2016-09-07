@@ -1,6 +1,6 @@
-(defproject minimal-webapp "0.1.0-SNAPSHOT"
+(defproject lambda-racing "0.1.0-SNAPSHOT"
   :description "Minimal webapp using ClojureScript, Compojure, and Reagent"
-  :url "https://github.com/raxod502/minimal-webapp"
+  :url "https://github.com/esiefkas/lambda-racing.com"
   :license {:name "MIT License"
             :url "http://www.opensource.org/licenses/mit-license.php"}
 
@@ -26,15 +26,15 @@
   :cljsbuild {:builds [{:id "main"
                         :source-paths ["src"]
                         :figwheel true
-                        :compiler {:main "minimal-webapp.pages.splash"
+                        :compiler {:main "lambda-racing.pages.splash"
                                    :output-to "resources/public/js/main.js"
                                    :output-dir "resources/public/js/out"
                                    :asset-path "js/out"}}]}
-  :figwheel {:ring-handler minimal-webapp.server/site}
+  :figwheel {:ring-handler lambda-racing.server/site}
 
   :clean-targets ^{:protect false} ["resources/public" "target"]
 
-  :uberjar-name "minimal-webapp-standalone.jar"
+  :uberjar-name "lambda-racing-standalone.jar"
   :profiles {:uberjar {:aot :all
-                       :main minimal-webapp.server
+                       :main lambda-racing.server
                        :hooks [leiningen.cljsbuild]}})

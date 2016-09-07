@@ -1,4 +1,4 @@
-(ns minimal-webapp.pages.splash
+(ns lambda-racing.pages.splash
   (:require [reagent.core :as r]))
 
 (r/render

@@ -1,4 +1,4 @@
-(ns minimal-webapp.server
+(ns lambda-racing.server
   (:require [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
             [compojure.handler :as handler]
             [compojure.route :as route]
@@ -12,7 +12,7 @@
 (def main-page
   [:html
    [:head
-    [:title "Minimal Webapp"]]
+    [:title "Lambda Racing!!!!!!!"]]
    [:body
     [:div#app]
     (include-js "js/main.js")]])
