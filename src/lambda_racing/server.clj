@@ -4,7 +4,8 @@
             [compojure.route :as route]
             [hiccup.core :as hiccup]
             [hiccup.page :refer [include-js]]
-            [ring.adapter.jetty :as jetty])
+            [ring.adapter.jetty :as jetty]
+            [config.core :refer [env]])
   (:gen-class))
 
 ;;;; Base HTML pages
@@ -49,9 +50,9 @@
     #'server
     (constantly
       (jetty/run-jetty #'site
-                       {:port (Long. (or port 5000))
+                       {:port (Long. (or port 3000))
                         :join? false}))))
 
 (defn -main
   [& [port]]
-  (start port))
+  (start (Integer/parseInt (or (env :port) "3000"))))
