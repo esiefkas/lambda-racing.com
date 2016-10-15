@@ -16,6 +16,8 @@
 
                  ;; Client
                  [reagent "0.5.1"]
+                 [reagent-utils "0.2.0"]
+                 [secretary "1.2.3"]
 
                  ;; Emacs integration
                  [com.cemerick/piggieback "0.2.1"]
@@ -24,10 +26,12 @@
   :plugins [[lein-cljsbuild "1.1.3"]
             [lein-figwheel "0.5.4-7"]]
 
+  :source-paths ["src/clj"]
+
   :cljsbuild {:builds [{:id "main"
-                        :source-paths ["src"]
+                        :source-paths ["src/cljs"]
                         :figwheel true
-                        :compiler {:main "lambda-racing.pages.splash"
+                        :compiler {:main "lambda-racing.core"
                                    :output-to "resources/public/js/main.js"
                                    :output-dir "resources/public/js/out"
                                    :asset-path "js/out"}}]}
